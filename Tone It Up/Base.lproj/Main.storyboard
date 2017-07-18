@@ -17,7 +17,7 @@
                 </avPlayerViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D0G-hf-KW1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2152.8000000000002" y="-441.22938530734638"/>
+            <point key="canvasLocation" x="2580" y="-442"/>
         </scene>
         <!--Daily Workout-->
         <scene sceneID="wg7-f3-ORb">
