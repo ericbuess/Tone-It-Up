@@ -196,6 +196,11 @@
 				TargetAttributes = {
 					BCAC2FB71F1DA67600CB66A4 = {
 						CreatedOnToolsVersion = 9.0;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					BCAC2FCD1F1DA67700CB66A4 = {
 						CreatedOnToolsVersion = 9.0;
@@ -429,6 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4QP37J7KYE;
 				INFOPLIST_FILE = "Tone It Up/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ericbuess.Tone-It-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,6 +449,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4QP37J7KYE;
 				INFOPLIST_FILE = "Tone It Up/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ericbuess.Tone-It-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
