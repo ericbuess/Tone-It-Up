@@ -12,7 +12,7 @@ import SafariServices
 class SecondViewController: UIViewController, SFSafariViewControllerDelegate {
 
     let safariVC = SFSafariViewController(url: NSURL(string: "https://my.toneitup.com/pages/daily-workout-1")! as URL)
-    var dismissed = false
+    var showWebsite = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,16 +22,13 @@ class SecondViewController: UIViewController, SFSafariViewControllerDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.dismissed = false
+        self.showWebsite = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if !dismissed {
-            self.present(safariVC, animated: false, completion: {
-                self.dismissed = true
-                self.tabBarController?.selectedIndex = 1
-            })
+        if self.showWebsite {
+            self.present(safariVC, animated: false, completion: nil)
         }
     }
     override func didReceiveMemoryWarning() {
@@ -40,8 +37,13 @@ class SecondViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
+        self.showWebsite = false
         controller.dismiss(animated: false, completion: nil)
+        self.tabBarController?.selectedIndex = 1
     }
 
+    func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
+        print("search the page for <video> tags or src extensions ending in m3u8")
+    }
 }
 
